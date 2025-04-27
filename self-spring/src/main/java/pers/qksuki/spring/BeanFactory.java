@@ -1,23 +1,30 @@
 package pers.qksuki.spring;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 /**
  * bean工厂
  *
  * @author qksuki
  * @date 2025-04-24 05:44:15
  */
-public class BeanFactory {
-	private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
+public interface BeanFactory {
 
-	public Object getBean(String beanName) {
-		return beanDefinitionMap.get(beanName).getBean();
-	}
+	/**
+	 * 获取 bean
+	 *
+	 * @param beanName bean名字
+	 * @return {@link Object }
+	 * @throws BeansException bean异常
+	 */
+	Object getBean(String beanName) throws BeansException;
 
-	public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
-		beanDefinitionMap.put(beanName, beanDefinition);
-	}
+	/**
+	 * 获取 bean
+	 *
+	 * @param beanName bean名字
+	 * @param args     arg游戏
+	 * @return {@link Object }
+	 * @throws BeansException bean异常
+	 */
+	Object getBean(String beanName, Object... args) throws BeansException;
 }
 
