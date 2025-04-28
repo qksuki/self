@@ -1,6 +1,6 @@
-package pers.qksuki.spring.beans.support;
+package pers.qksuki.spring.beans.factory.support;
 
-import pers.qksuki.spring.beans.factory.BeanDefinition;
+import pers.qksuki.spring.beans.factory.config.BeanDefinition;
 
 /**
  * Bean定义注册中心

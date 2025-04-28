@@ -1,6 +1,6 @@
-package pers.qksuki.spring.beans.support;
+package pers.qksuki.spring.beans.factory.support;
 
-import pers.qksuki.spring.beans.factory.SingletonBeanRegistry;
+import pers.qksuki.spring.beans.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

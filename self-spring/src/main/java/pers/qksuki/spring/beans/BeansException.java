@@ -1,4 +1,4 @@
-package pers.qksuki.spring;
+package pers.qksuki.spring.beans;
 
 /**
  * bean 异常

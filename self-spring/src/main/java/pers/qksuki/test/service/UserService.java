@@ -3,6 +3,7 @@ package pers.qksuki.test.service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pers.qksuki.test.dao.UserDAO;
 
 /**
  * 用户服务
@@ -14,6 +15,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserService {
-	private String name;
+	private UserDAO userDAO;
+
+	public void queryUserName(String userID) {
+		System.out.println(userDAO.queryById(userID));
+	}
 }
 

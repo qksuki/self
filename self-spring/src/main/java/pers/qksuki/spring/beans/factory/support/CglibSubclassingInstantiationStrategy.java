@@ -1,9 +1,9 @@
-package pers.qksuki.spring.beans.support;
+package pers.qksuki.spring.beans.factory.support;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.NoOp;
-import pers.qksuki.spring.BeansException;
-import pers.qksuki.spring.beans.factory.BeanDefinition;
+import pers.qksuki.spring.beans.BeansException;
+import pers.qksuki.spring.beans.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
 

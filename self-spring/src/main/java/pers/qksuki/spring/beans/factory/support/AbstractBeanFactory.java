@@ -1,8 +1,8 @@
-package pers.qksuki.spring.beans.support;
+package pers.qksuki.spring.beans.factory.support;
 
-import pers.qksuki.spring.BeanFactory;
-import pers.qksuki.spring.BeansException;
-import pers.qksuki.spring.beans.factory.BeanDefinition;
+import pers.qksuki.spring.beans.BeanFactory;
+import pers.qksuki.spring.beans.BeansException;
+import pers.qksuki.spring.beans.factory.config.BeanDefinition;
 
 /**
  * 抽象bean工厂模板方法

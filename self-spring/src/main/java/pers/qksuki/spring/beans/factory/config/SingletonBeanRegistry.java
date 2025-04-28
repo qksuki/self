@@ -1,7 +1,4 @@
-package pers.qksuki.spring.beans.factory;
-
-import java.util.HashMap;
-import java.util.Map;
+package pers.qksuki.spring.beans.factory.config;
 
 /**
  * 单例 bean 注册借口
