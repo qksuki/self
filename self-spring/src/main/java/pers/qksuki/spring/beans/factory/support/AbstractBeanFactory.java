@@ -1,6 +1,6 @@
 package pers.qksuki.spring.beans.factory.support;
 
-import pers.qksuki.spring.beans.BeanFactory;
+import pers.qksuki.spring.beans.factory.BeanFactory;
 import pers.qksuki.spring.beans.BeansException;
 import pers.qksuki.spring.beans.factory.config.BeanDefinition;
 
@@ -20,8 +20,13 @@ public abstract class AbstractBeanFactory
 	}
 
 	@Override
-	public Object getBean(String beanName, Object... args) throws BeansException {
-		return doGetBean(beanName, args);
+	public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+		return (T) getBean(name);
+	}
+
+	@Override
+	public Object getBean(String name, Object... args) throws BeansException {
+		return doGetBean(name, args);
 	}
 
 	protected <T> T doGetBean(final String name, final Object[] args) {

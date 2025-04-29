@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<beans>
+    <bean id="userDAO" class="pers.qksuki.test.dao.UserDAO"/>
+
+    <bean id="userService" class="pers.qksuki.test.service.UserService">
+        <property name="userDAO" ref="userDAO"/>
+    </bean>
+</beans>

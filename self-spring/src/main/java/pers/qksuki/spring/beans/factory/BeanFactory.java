@@ -1,4 +1,6 @@
-package pers.qksuki.spring.beans;
+package pers.qksuki.spring.beans.factory;
+
+import pers.qksuki.spring.beans.BeansException;
 
 /**
  * bean工厂
@@ -26,5 +28,15 @@ public interface BeanFactory {
 	 * @throws BeansException bean异常
 	 */
 	Object getBean(String beanName, Object... args) throws BeansException;
+
+	/**
+	 * 获取 bean
+	 *
+	 * @param beanName     bean名字
+	 * @param requiredType 所需类型
+	 * @return {@link T }
+	 * @throws BeansException bean异常
+	 */
+	<T> T getBean(String beanName ,Class<T> requiredType) throws BeansException;
 }
 
